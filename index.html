@@ -25,13 +25,16 @@
       width: 80%;
     }
     
-    .block {
-      display: block;
+    .pic {
+      width: 50px;
+      display: inline-flex;
+      padding: 5px;
+      padding-top: 15px;
     }
   </style>
 </head>
 
-<body class="container" background-color=yellow>
+<body class="container">
   <div style="background-color: #D8D8F6">
     <div class="row">
       <div style="text-align: center">
@@ -43,13 +46,22 @@
     
     <div class="row">
       <div class="container">
-          <div class="one-half column middle">
+        <div class="one-half column middle">
           <img src="assets/img/me.png" alt="[Фото]" width="200" height="200" align=center/>
           <h5>Контактная информация</h5>
           <p class="middle">Телефон: +7 918 595 4422 </p>
             <p class="middle">г. Таганрог, Ростовская обл. 347923.</p>
             <p class="middle">E-mail: 4nikram@gmail.com</p>
           <a href="mailto:4nikram@gmail.com?Subject=Dear%20Mr.%20Markin" class="button button-primary" target="_top">Написать мне</a>
+          
+          <div class="row">
+            <div class="container">
+              <a href="https://github.com/Anikram"><img src="assets/img/github.png" alt="[github pic]" class="pic"></a>
+              <a href="https://www.facebook.com/anikram"><img src="assets/img/fb.png" alt="[github pic]" class="pic"></a>
+              <a href="https://www.linkedin.com/in/alexander-markin-59533767/"><img src="assets/img/lin.png" alt="[github pic]" class="pic"></a>
+            </div>
+          </div>
+          
         </div>
         
         <div class="one-half column">
@@ -147,13 +159,13 @@
           
           <h5 id="proj">Проекты</h5>
           <h6>Приложение Askme</h6>
-          <img src="data/ask.png" alt="[скрин приложения]" style="width: 200px;">
+          <img src="assets/img/ask.png" alt="[скрин приложения]" style="width: 200px;">
           <p>Приложение - соц. сеть для задавания-отвечания на вопросы (аналог сервиса ask.fm). В приложении реализованна
           регистрация и аутентификация пользователя (без сторонних библиотек), индивидуальная настройка внешнего вида (аватарка, цвет
             фон профиля), интернационализация. Приложения написано с использоватением Bootstrap 3. Встроена
             Invisible Captcha защита от спама. Деплой приложения выполнен на сервис <a href="https://my-ask-clone.herokuapp.com/">Heroku</a>.</p>
           <h6>Приложение BBQ</h6>
-          <img src="data/bbq.png" alt="[скрин приложения]" style="width: 200px;">
+          <img src="assets/img/bbq.png" alt="[скрин приложения]" style="width: 200px;">
           <p>Приложение для организации встреч. В приложении реализована работа с пользователями (gem devise), загрузка
             (gem carrierwave) и обработка (gem rmagick) фотографий. Так же реализованно хранение загруженного материала в
           облачном хранилище на AWS S3. Реализована отправка почты через приложение, с использованием ActionMailer, Sendgrid(Heroku),
@@ -163,7 +175,7 @@
           приложение доступно по адресу <a href="http://mymeet.website/">mymeet.website</a> и
             на <a href="https://thersty-beast.herokuapp.com/">Heroku</a></p>
           <h6>Приожение "Кто хочет стать миллионером"</h6>
-          <img src="data/khsm.png" alt="[скрин приложения]" style="width: 200px;">
+          <img src="assets/img/khsm.png" alt="[скрин приложения]" style="width: 200px;">
           <p>Игра - ремейк популярной в прошлом игры "Кто хочет стать миллионером". В работе над приложением, был подробно
           изучен метод разработки TDD, а так же best practices в области тестирования компонент приложения. Приложение
             доступно для ознакомления в репозитории Github.</p>

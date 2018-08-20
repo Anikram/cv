@@ -11,13 +11,15 @@
     }
     
     p {
-    text-align: left;
+      text-align: left;
+      text-indent: 45px;
     }
     
     .middle {
       text-align: center;
       margin-left: auto;
       margin-right: auto;
+      text-indent: 0px;
     }
     
     hr {
@@ -30,6 +32,20 @@
       display: inline-flex;
       padding: 5px;
       padding-top: 15px;
+    }
+    
+    .special_text {
+      letter-spacing: 1px;
+      display: block;
+      line-height: 30px;
+      text-indent: 15px;
+    }
+    
+    .block {
+      display: block;
+      width: 250px;
+      margin: auto;
+      margin-bottom: 2px;
     }
   </style>
 </head>
@@ -58,7 +74,7 @@
             <div class="container">
               <a href="https://github.com/Anikram"><img src="assets/img/github.png" alt="[github pic]" class="pic"></a>
               <a href="https://www.facebook.com/anikram"><img src="assets/img/fb.png" alt="[github pic]" class="pic"></a>
-              <a href="https://www.linkedin.com/in/alexander-markin-59533767/"><img src="assets/img/lin.png" alt="[github pic]" class="pic"></a>
+              <a href="https://www.linkedin.com/in/anikram/"><img src="assets/img/lin.png" alt="[linkedin pic]" class="pic"></a>
             </div>
           </div>
           
@@ -96,41 +112,50 @@
     <div class="row">
       <div class="container">
         <div class="one-half column">
-          <h5>Коротко о себе</h5>
-            <ul>
-              <li>Мужчина 29 лет</li>
-              <li>Женат</li>
-              <li>Высокая мотивация</li>
-              <li>Ответственность</li>
-              <li>Обучаемость</li>
-              <li>Общительность</li>
-              <li>Работа на результат</li>
-              <li>Энергичность</li>
-              <li>Трудолюбие</li>
-              <li>Жизненные приоритеты - семья, работа, хобби.</li>
-            </ul>
+          <a href="data/motivation.pdf" class="button block">Мотивационное письмо</a>
+          <a href="#dev_exp" class="button block">Опыт разработки</a>
+          <a href="#proj" class="button block">Проекты</a>
+          <a href="#edu" class="button block">Образование</a>
+          <a href="#exp" class="button block">Опыт работы</a>
+          <a href="#jobs" class="button block">Места работы</a>
         </div>
-    
         <div class="one-half column">
-          <a href="data/motivation.pdf" class="button u-full-width">Мотивационное письмо</a>
-          <a href="#dev_exp" class="button u-full-width">Опыт разработки</a>
-          <a href="#proj" class="button u-full-width">Проекты</a>
-          <a href="#edu" class="button u-full-width">Образование</a>
-          <a href="#exp" class="button u-full-width">Опыт работы</a>
-          <a href="#jobs" class="button u-full-width">Места работы</a>
+          <h5>Профессиональные принципы</h5>
+          <p>В работе и в жизни я за простоту, красоту и порядок. Мои принципы делать работу качественно и в срок.
+            Я считаю что соблюдение код стайла и применение лучших практик для решения задач - это норма. Мой код понятен мне
+            и другим. Я думаю что эфективная коммуникация (в том числе через код) залог успеха и взаимопонимания в коллективе.</p>
         </div>
       </div>
     </div>
   
     <hr>
     
-    
     <div class="row">
       <div class="container">
-        <h5>Профессиональные принципы</h5>
-        <p>В работе и в жизни я за простоту, красоту и порядок. Мои принципы делать работу качественно и в срок.
-        Я считаю что соблюдение код стайла и применение лучших практик для решения задач - это норма. Мой код понятен мне
-        и другим. Я думаю что эфективная коммуникация (в том числе через код) залог успеха и взаимопонимания в коллективе.</p>
+        <h5 id="proj">Проекты</h5>
+        <h6>Приложение Askme</h6>
+        <a href="https://my-ask-clone.herokuapp.com/"><img src="assets/img/ask.png" alt="[скрин приложения]" style="width: 200px;"></a>
+        <a href="https://github.com/Anikram/askme" class="special_text">Репозиторий проекта</a>
+        <p>Приложение - соц. сеть для задавания-отвечания на вопросы (аналог сервиса ask.fm). В приложении реализованна
+          регистрация и аутентификация пользователя (без сторонних библиотек), индивидуальная настройка внешнего вида (аватарка, цвет
+          фон профиля), интернационализация. Приложения написано с использоватением Bootstrap 3. Встроена
+          Invisible Captcha защита от спама. Деплой приложения выполнен на сервис Heroku.</p>
+        <h6>Приложение BBQ</h6>
+        <a href="http://mymeet.website/"><img src="assets/img/bbq.png" alt="[скрин приложения]" style="width: 200px;"></a>
+        <a href="https://github.com/Anikram/BBQ" class="special_text">Репозиторий проекта</a>
+        <p>Приложение для организации встреч. В приложении реализована работа с пользователями (gem devise), загрузка
+          (gem carrierwave) и обработка (gem rmagick) фотографий. Так же реализованно хранение загруженного материала в
+          облачном хранилище на AWS S3. Реализована отправка почты через приложение, с использованием ActionMailer, Sendgrid(Heroku),
+          Postfix(VPS). Для деплоя приложения был приобретен VPS, доменное имя и настроены DNS связи для доступа по URL.
+          Была настроена ОС ubuntu server 16.04, установлен rbenv, ruby, rails. Установлен и настроен Postgres, nginx,
+          passenger, postfix. Был выполнен деплой на VPS ноду в ручную и при помощи gem'а capistrano. В настоящее время
+          приложение доступно по адресу mymeet.website и на <a href="https://thersty-beast.herokuapp.com/">Heroku</a></p>
+        <h6>Приожение "Кто хочет стать миллионером"</h6>
+        <img src="assets/img/khsm.png" alt="[скрин приложения]" style="width: 200px;">
+        <a href="https://github.com/Anikram/BBQ" class="special_text">Репозиторий проекта</a>
+        <p>Игра - ремейк популярной в прошлом игры "Кто хочет стать миллионером". В работе над приложением, был подробно
+          изучен метод разработки TDD, а так же best practices в области тестирования компонент приложения. Приложение
+          доступно для ознакомления в репозитории Github.</p>
       </div>
     </div>
   
@@ -157,28 +182,6 @@
           Особое внимание уделено культуре программирования, код стайлу, отладки приложения, работы с логами и исправлением
           ошибок.</p>
           
-          <h5 id="proj">Проекты</h5>
-          <h6>Приложение Askme</h6>
-          <img src="assets/img/ask.png" alt="[скрин приложения]" style="width: 200px;">
-          <p>Приложение - соц. сеть для задавания-отвечания на вопросы (аналог сервиса ask.fm). В приложении реализованна
-          регистрация и аутентификация пользователя (без сторонних библиотек), индивидуальная настройка внешнего вида (аватарка, цвет
-            фон профиля), интернационализация. Приложения написано с использоватением Bootstrap 3. Встроена
-            Invisible Captcha защита от спама. Деплой приложения выполнен на сервис <a href="https://my-ask-clone.herokuapp.com/">Heroku</a>.</p>
-          <h6>Приложение BBQ</h6>
-          <img src="assets/img/bbq.png" alt="[скрин приложения]" style="width: 200px;">
-          <p>Приложение для организации встреч. В приложении реализована работа с пользователями (gem devise), загрузка
-            (gem carrierwave) и обработка (gem rmagick) фотографий. Так же реализованно хранение загруженного материала в
-          облачном хранилище на AWS S3. Реализована отправка почты через приложение, с использованием ActionMailer, Sendgrid(Heroku),
-          Postfix(VPS). Для деплоя приложения был приобретен VPS, доменное имя и настроены DNS связи для доступа по URL. 
-            Была настроена ОС ubuntu server 16.04, установлен rbenv, ruby, rails. Установлен и настроен Postgres, nginx, 
-            passenger, postfix. Был выполнен деплой на VPS ноду в ручную и при помощи gem'а capistrano. В настоящее время 
-          приложение доступно по адресу <a href="http://mymeet.website/">mymeet.website</a> и
-            на <a href="https://thersty-beast.herokuapp.com/">Heroku</a></p>
-          <h6>Приожение "Кто хочет стать миллионером"</h6>
-          <img src="assets/img/khsm.png" alt="[скрин приложения]" style="width: 200px;">
-          <p>Игра - ремейк популярной в прошлом игры "Кто хочет стать миллионером". В работе над приложением, был подробно
-          изучен метод разработки TDD, а так же best practices в области тестирования компонент приложения. Приложение
-            доступно для ознакомления в репозитории Github.</p>
         </div>
       </div>
     </div>

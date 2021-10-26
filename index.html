@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/normalize.css"/>
   <link rel="stylesheet" href="css/skeleton.css"/>
-  <title>Аlexander Markin - Ruby on Rails developer</title>
+  <title>Аlexander Markin - JavaScript/ROR developer</title>
   <style>
     body{
     background-color: #123456; /* Цвет фона веб-страницы */
@@ -26,9 +26,20 @@
       border-color: #123456;
       width: 80%;
     }
+
+    .pic_wrapper {
+      width: 70px;
+      height: 70px;
+    }
+
+    .flex {
+      display: flex;
+
+    }
     
     .pic {
-      width: 50px;
+      width: 100%;
+      height: 100%;
       display: inline-flex;
       padding: 5px;
       padding-top: 15px;
@@ -72,6 +83,10 @@
     .certificate_container {
       display: flex;
     }
+    
+    .align-left{
+      text-align: left;
+    }
   </style>
 </head>
 
@@ -79,8 +94,8 @@
   <div style="background-color: #D8D8F6">
     <div class="row">
       <div style="text-align: center">
-        <h4>Александр Б. Маркин</h4>
-        <h4>Ruby on Rails разработчик</h4>
+        <h4>Александр Маркин</h4>
+        <h4>JavaScript / Ruby on Rails разработчик</h4>
         <hr>
       </div>
     </div>
@@ -96,10 +111,11 @@
           <a href="mailto:4nikram@gmail.com?Subject=Dear%20Mr.%20Markin" class="button button-primary" target="_top">Написать мне</a>
           
           <div class="row">
-            <div class="container">
-              <a href="https://github.com/Anikram"><img src="assets/img/github.png" alt="[github pic]" class="pic"></a>
-              <a href="https://www.facebook.com/anikram"><img src="assets/img/fb.png" alt="[github pic]" class="pic"></a>
-              <a href="https://www.linkedin.com/in/anikram/"><img src="assets/img/lin.png" alt="[linkedin pic]" class="pic"></a>
+            <div class="flex">
+              <div class='pic_wrapper'><a href="https://github.com/Anikram"><img src="assets/img/github.png" alt="[github pic]" class="pic"></a></div>
+              <div class="pic_wrapper"><a href="https://www.facebook.com/anikram"><img src="assets/img/fb.png" alt="[github pic]" class="pic"></a></div>
+              <div class="pic_wrapper"><a href="https://www.linkedin.com/in/anikram/"><img src="assets/img/lin.png" alt="[linkedin pic]" class="pic"></a></div>
+              <div class="pic_wrapper"><a href="https://t.me/anikram22"><img src="assets/img/telegram.png" alt="[telegram pic]" class="pic"></a></div>     
             </div>
           </div>
           
@@ -109,6 +125,11 @@
           <div id="skills">
             <h5>Навыки</h5>
             <ul>
+              <li>JavaScript, React (v16+) </li>
+              <li>node.js (v12+), Expressjs, Sequelize, AWS S3 SDK</li>
+              <li>neo4j, MongoDB, Postgres</li>
+              <li>GraphQL</li>
+              <li>HTML, CSS, SCSS, Styled Components, Bootstrap, Skeleton</li>
               <li>Ruby, Ruby on Rails</li>
               <li>Gems: Device, capistrano, pandit, Carrierwave, rmagic, ActiveAdmin</li>
               <li>TDD, Rspec, Capybara, AWS</li>
@@ -116,23 +137,22 @@
               <li>Английский язык Upper-intermediate.</li>
               <li>XML, JSON</li>
               <li>Use case, CRUD(L)</li>
-              <li>HTML, CSS, Bootstrap, Skeleton</li>
               <li>Deploy: Heroku, VPS(nginx + passenger + postfix).</li>
-              <li>Soft skills: Эмоциональный интеллект, планирование, общение, решение конфликтов </li>
+              <li>Soft skills: Эмоциональный интеллект, планирование, общение, решение конфликтов, обучаемость </li>
             </ul>
             
             <h5>Сертификаты</h5>
             <div class="certificate_container">
-              <div class="certificate_div"><img src="assets/img/pet_low.jpg"></div>
-              <div class="certificate_div"><img src="assets/img/ror_low.jpg"></div>
+              <div class="certificate_div"><img src="assets/img/pet_low.jpg" class="certificate"></div>
+              <div class="certificate_div"><img src="assets/img/ror_low.jpg" class="certificate"></div>
             </div>
             
             <h5>Желаемая позиция</h5>
-            <p>Full-stack, Backend, Frontend developer.</p>
+            <p class="align-left">Full-stack, Backend, Frontend JS/ROR developer.</p>
             <ul>
-              <li>от 50 000 ₽</li>
+              <li>от 80 000 ₽</li>
               <li>5/2, 8 часов</li>
-              <li>Коммандировки</li>
+              <li>Редкие Коммандировки</li>
               <li>Переезд</li>
               <li>Удаленка</li>
             </ul>
@@ -155,9 +175,9 @@
         </div>
         <div class="one-half column">
           <h5>Профессиональные принципы</h5>
-          <p>В работе и в жизни я за простоту, красоту и порядок. Мои принципы делать работу качественно и в срок.
-            Я считаю что соблюдение код стайла и применение лучших практик для решения задач - это норма. Мой код понятен мне
-            и другим. Я думаю что эфективная коммуникация (в том числе через код) залог успеха и взаимопонимания в коллективе.</p>
+          <p>В работе и в жизни я за простоту, красоту и порядок. Мой принцип - делать работу качественно и в срок.
+            Считаю, что соблюдение код стайла и применение лучших практик для решения задач - это норма. Эффективная
+            коммуникация залог успеха и взаимопонимания в коллективе.</p>
         </div>
       </div>
     </div>
@@ -167,17 +187,25 @@
     <div class="row">
       <div class="container">
         <h5 id="proj">Проекты</h5>
+        <h6>Игра City Quiz </h6>
+        <a href="https://cities-quiz.herokuapp.com/"><img src="assets/img/citiesQuiz.png" alt="[скрин приложения]" class="projects_pic"></a>
+        <a href=https://github.com/Anikram/citiesQuiz class="special_text">Репозиторий проекта</a>
+        <p>Приложение - игра. Нужно один за одним найти местоположение указанных городов. Попытка защитана как успешная, если ваше предположение в радиусе 50км
+          от реального местоположения города. Вы проиграете, если у ваш запас киллометров иссякнет. Написано на React + nodejs + mongo. Задеплоено 
+          на <a href="https://cities-quiz.herokuapp.com/">Heroku</a></p> 
+
         <h6>Приложение Askme</h6>
         <a href="https://my-ask-clone.herokuapp.com/"><img src="assets/img/ask.png" alt="[скрин приложения]" class="projects_pic"></a>
         <a href="https://github.com/Anikram/askme" class="special_text">Репозиторий проекта</a>
+        
         <p>Приложение - соц. сеть для задавания-отвечания на вопросы (аналог сервиса ask.fm). В приложении реализованна
           регистрация и аутентификация пользователя (без сторонних библиотек), индивидуальная настройка внешнего вида (аватарка, цвет
-          фон профиля), интернационализация. Приложения написано с использоватением Bootstrap 3. Встроена
+          фон профиля), интернационализация. Приложение написано с использоватением Bootstrap 3. Встроена
           Invisible Captcha защита от спама. Деплой приложения выполнен на сервис Heroku.</p>
         <h6>Приложение BBQ</h6>
         <a href="https://thersty-beast.herokuapp.com/"><img src="assets/img/bbq.png" alt="[скрин приложения]" class="projects_pic"></a>
         <a href="https://github.com/Anikram/BBQ" class="special_text">Репозиторий проекта</a>
-        <p>Приложение для организации встреч. В приложении реализована работа с пользователями (gem devise), загрузка
+        <p>Приложение для организации встреч. Реализована работа с пользователями (gem devise), загрузка
           (gem carrierwave) и обработка (gem rmagick) фотографий. Так же реализованно хранение загруженного материала в
           облачном хранилище на AWS S3. Реализована отправка почты через приложение, с использованием ActionMailer, Sendgrid(Heroku),
           Postfix(VPS). Для деплоя приложения был приобретен VPS, доменное имя и настроены DNS связи для доступа по URL.
@@ -191,11 +219,11 @@
           изучен метод разработки TDD, а так же best practices в области тестирования компонент приложения. Приложение
           доступно для ознакомления в репозитории Github.</p>
         <h6 id="commercial_exp">Приложение Сайт ООО "ЮгПром" (коммерческий проект)</h6>
-        <a href="https://ugprom-sdt.ru"><img src="assets/img/ugprom_new.png" alt="[скрин приложения]" class="projects_pic"></a>
-        <p>Приложение сайт-визитка компании. В приложении есть панель администратора, сделанная на библиотеке ActiveAdmin
+        <a href="https://www.ugprom-sdt.ru"><img src="assets/img/ugprom_new.png" alt="[скрин приложения]" class="projects_pic"></a>
+        <p>Приложение сайт-визитка компании. Реализована панель администратора, сделанная на библиотеке ActiveAdmin
           для добавления контента на сайт пользователями, без навыков программирования. Сайт поднят на VPS ноде AWS EC2.
         Поднята Стейдж версия на сервисе Heroku. Деплой происходит автоматически при помощи gem'а capistrano. На боевом
-          сервере стоит <span>ОС Ubuntu server</span> , настроен сервер nginx + passenger и база данных Postgres. Установлен rbenv, ruby и Rails.
+          сервере стоит <span>ОС Ubuntu server 18</span> , настроен сервер nginx + passenger и база данных Postgres. Установлен rbenv, ruby и Rails.
           На Nginx настрон free SSL для создания безопасного соединения https.</p>
       </div>
     </div>
@@ -206,26 +234,32 @@
       <div class="container">
         <div id="dev_exp">
           <h5>Опыт разработки</h5>
-          <p>В 2018 году закончил 5-месячный интенсив-курс по разработке на Ruby on Rails. Работал на Ruby (2.4.1-2.5.1). Написал
+          <p>Азы программирования изучал в институте ТТИ ЮФУ. Программировал на С, Pascal, ASM, Visual Fox Pro. Работал с
+          микроконтроллерами семейства AVR и эмуляцией ПЛИС.</p>
+          <p>В рамках бесплатного курса по разработке игр в университете познакомился с разработкой игр,
+            языком Lua и движком Love2D. Принял участие в хакатоне в команде из 5 человек в качестве программиста.</p>
+          <p>В 2018 году закончил курс по разработке на Ruby on Rails. Работал на Ruby (2.4.1-2.5.1). Написал
           ряд программ, среди которых <a href="https://github.com/Anikram/hanged_man">Висилица</a> (консольный вариант
             сторой игры с псевдографикой), <a href="https://github.com/Anikram/mendeleev">Менделеев</a> (справочник по
           элементам периодической таблицы), <a href="https://github.com/Anikram/wardrobe">Гардероб</a> (подбор одежды
             под заданную температуру). Познакомился с принципами программирования, основынми понятиями и типичными
             конструкциями потока программ.
           </p>
-          <p>В рамках интенсива я разработал 3 Rails приложения. Работал с базами данных SQLite3 и PostgreSQL. Освоил методы
+          <p>В рамках курса разработал 3 Rails приложения. Работал с базами данных SQLite3 и PostgreSQL. Освоил методы
           тестирования моделей, вьюх и контроллеров, познакомился с концепцией TDD. Задеплоил приложения на хостинг Heroku и
           на свою VPS ноду. Решил задачи отправки почты, интернационализации проекта, загрузки фотографий, разграничения
           доступа к ресурсам, защита базы данных от взломов и инъекций, тестирования работоспособности, деплоя приложения.
-          Особое внимание уделено культуре программирования, код стайлу, отладки приложения, работы с логами и исправлением
+          Особое внимание уделено культуре программирования, код стайлу, отладке приложения, работы с логами и исправлением
           ошибок.</p>
-          <p>По окончании курса я устроился на часть ставки веб-разработчиком на текущее место работы для разработки 
-            <a href="https://ugprom-sdt.ru">сайта</a>. В настоящий момент сайт функционирует на Rails 5.2.1.
-            В проекте использовалась библиотека Active Admin для создания CMS (наполнение сайта и быстрое обновление данных менеджерами).
-          Хранение файлов реализовано в AWS S3. Для деплоя использовался gem capistrano. Стейдж версия приложения работает на
-          <a href="https://fathomless-caverns-66251.herokuapp.com/">Heroku</a>, для теста новых фитч. Продакшн
-            <a href="https://ugprom-sdt.ru">ugprom-sdt.ru</a>крутится на VPS EC2.
+          <p>Выполнил коммерческий проект сайта промышленной организации. Сайт функционирует на Rails 5.2.1. В проекте
+            использовалась библиотека Active Admin для создания CMS (наполнение сайта и быстрое обновление данных менеджерами).
+          Хранение файлов реализовано в AWS S3. Для деплоя использовался gem capistrano. Стейджинг версия приложения работает на
+          <a href="https://fathomless-caverns-66251.herokuapp.com/">Heroku</a>, для теста новых фитч. Продакшн версия работает
+            на VPS AWS EC2 (<a href="https://ugprom-sdt.ru">https://ugprom-sdt.ru</a>).
           </p>
+          <p id="skillpass">В настоящий момент работаю на должности Full-stack javascript developer над проектом - Маркет
+            Плейс для продажи уроков и статей. На проекте используется React 16, node.js + express, AWS EC2,
+            AWS S3, draft.js, neo4j, GraphQL. Проект в состоянии pre-alpha и еще не доступен для ознакомления в сети.</p>
         </div>
       </div>
     </div>
@@ -236,20 +270,17 @@
       <div class="container">
         <div id="exp">
           <h5>Опыт Работы</h5>
-          <p>В настоящий момент я работаю менеджером по качеству на заводе, который производит
-            <a href="https://www.google.ru/search?q=%D1%81%D0%BE%D0%B5%D0%B4
-              %D0%B8%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5+%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8+%D
-              1%82%D1%80%D1%83%D0%B1%D0%BE%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BE%D0%B2&newwindow=1&source=lnms
-              tbm=isch&sa=X&ved=0ahUKEwj5397qo4LaAhXIFSwKHebjCx4Q_AUICigB&biw=1680&bih=850">Стальные Соединительные детали трубопроводов.</a>
-            Завод изготавливает и поставляет продукцию для транспортировки газа и нефти. Продукция поставляется на
-            транспортные магистрали (трубопроводы), компрессорные станции, а так же на склады для покрытия ремонтных запасов.
+          <p>     После окончания университета я устроился на завод на должность  <span style="font-style: italic">технолога</span>. Изготавливал документацию, рассчитывал технологические переменные. Был повышен до <span style="font-style: italic">ведущего технолога</span>. Занимался
+          разработкой инструкций для специалистов производственного цеха. </p>
+          <p>      Занимался описанием бизнес-процессов. Прошел обучение и изучил стандарты серии ISO 9000. Начал проводить и принимать аудиты предприятия.
+            Вместе с коммандой разрабобтал СМК предприятия. Придерживался принципа необходимого и достаточного документооборота. Со временем меня повысили до <span style="font-style: italic">Зам. директора по качеству</span>.
           </p>
-          <p>С 2018 года я устроился на должность веб-разработчика по совместительству для создания сайта оргнизации.
-          На основе Rails 5 я сделал <a href="#commercial_exp">приложение сайт-визитку</a> с возможностью обновлять данные
-            через панель администратора без навыков программирования, для сотрудников фирмы.</p>
-          <p>Занимаюсь поддержкой и обновлением сайта. Недавно в продакшн залил новую версия сайта с обновленным дизайном.
-            Отзывчивость сайта выполнена с использование bootstrap 4.
-          </p>
+          <p>       В 2018 году прошел обучение и устроился на должность <span style="font-style: italic">веб-разработчика</span> (неполная занятость).
+          Разработал ROR приложение <a href="#commercial_exp">сайт-визитку</a>, с возможностью обновлять данные
+            через панель администратора. Занимался поддержкой и обновлением сайта. Выпустил в продакшн новую версию с обновленным дизайном.</p>
+          <p>       В 2021 году устроился на должность <span style="font-style: italic">Full-stack web developer</span> в
+            компанию <a href="https://intspirit.com/">intSpirit</a> где и работаю по сей день.
+            Работаю над <a href="#skillpass">приложением</a> в составе команды: Проект Менеджер, 2 full-stack разработчика, дизайнер</p>
         </div>
       </div>
     </div>
@@ -259,16 +290,15 @@
     <div class="row">
       <div class="container">
         <div id="edu">
-          <h5>Об орбазовании</h5>
-          <p>     Диплом о полном высшем образовани (инженер системотехник) защитил в 2011 году в Таганрогском Технологическом
-            Институте ЮФУ на радио-техническом факультете по специальности "Промышленная электроника" - 210106. Тема диплома -
-            "Система защиты вещей от пропажи" (Система белоков и меток для крепления к вещам, Bluetooth интерфейс). Система
-            была доведена до стадии моделирования программными средствами. </p>
-          <p>Изучал информатику, сетевые технологии, программирование на языках C, Pascal и Assembler. Программировал
-            микроконтроллеры симейства AVR, программные модели процессоров семейства x86 и ПЛИС.</p>
-          <p>После окончания ВУЗА прошел бесплатный курс по разработке игр (Lua). Интересовался web разработкой. Проходил бесплатные
-            курсы по JS, HTML5, CSS3.</p>
-          <p>В 2018 Прошел интенсив от <a href="https://goodprogrammer.ru/">Goodprogrammer.ru</a>.</p>
+          <h5>Орбазование</h5>
+          <p>Оконченное высшее образование. ТТИ ЮФУ (бывш. ТРТУ) Инженер системотехник. Специальность «Промышленная электроника» 210106. 2011 год.</p>
+          <p>Эксперт-Аудитор систем менеджмента качества ООО "Центральная Экспертно-Сертификационная компания". 2014 год.</p>
+          <p>Курсы повышения квалификации по описанию бизнес процессов. Бизнес-школа SRC. 2016 год. </p>
+          <p>Курсы повышения квалияикации по бережливому производству. Учебный центр Финконт. 2017 год.</p>
+          <p>Курс по разработке на Ruby on Rails от <a href="https://goodprogrammer.ru/">Goodprogrammer.ru</a>. 2018 год.
+          <p>Самообучение, Algoexpert.io, YoutTube</p>
+          <p>С 2012 года занимаюсь английским в языковой школе Language Link и частно. Поддерживаю уровень Upper-intermediate
+          (подтвержденный pre-intermediate PET с отличием level B2).</p>
         </div>
       </div>
     </div>
@@ -280,7 +310,8 @@
         <div id="jobs">
           <h5>Места работы</h5>
           <ul>
-            <li>Август 2018 - по настояшее время <br> Веб-разработчик <p><a href="data/leaflet.pdf">ООО "ЮгПром"</a></p></li>
+            <li>Февраль 2021 - по настояшее время <br> Фулл-стек разработчик <p><a href="https://intspirit.com/">LLC "IntSpirit"</a></p></li>
+            <li>Август 2018 - Февраль 2021 <br> Веб-разработчик <p><a href="data/leaflet.pdf">ООО "ЮгПром"</a></p></li>
             <li>Октябрь 2012 - по настоящее время <br/> Зам. директора по качеству - <p><a href="data/leaflet.pdf">ООО "ЮгПром"</a></p></li>
             <li>Май 2011 - Октябрь 2012 <br/> Гл. Технолог - <p><a href="data/leaflet.pdf">ООО "ЮгПром"</a></p></li>
             <li>Апрель 2010 - Май 2011 <br/> Технолог - <p><a href="data/leaflet.pdf">ООО "ЮгПром"</a></p></li>
